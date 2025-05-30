@@ -105,13 +105,15 @@ CustomThreadPool pool = new CustomThreadPool(
     CustomThreadPool.RejectedExecutionPolicy.CALLER_RUNS
 );
 ```
-Параметр	Значение	Назначение
-corePoolSize	2	    Постоянно активные потоки
-maxPoolSize	4	       Верхний предел
-keepAliveTime	5      с	Время ожидания до завершения
-queueSize	5	         Размер очереди
-minSpareThreads	 1	   Гарантия хотя бы 1 свободного потока
-RejectedPolicy	     CALLER_RUNS	Отправитель исполняет задачу при отказе
+
+| Параметр            | Значение                               | Назначение                       |
+|---------------------|----------------------------------------|-------------------------------|
+| corePoolSize           | 2 | Постоянно активные потоки |
+| maxPoolSize              | 4 | Верхний предел        |
+| keepAliveTim             | 5 | с	Время ожидания до завершения           |
+| queueSize            | 5 | Размер очереди |
+| inSpareThreads               | 1            | Гарантия хотя бы 1 свободного потока       |
+| RejectedPolicy		 |CALLER_RUNS | Отправитель исполняет задачу при отказе |
 
 ## 8. Детали реализации
 Очередь: LinkedBlockingQueue заданного размера
